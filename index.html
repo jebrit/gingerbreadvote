@@ -6,33 +6,155 @@
     <meta name="description" content="Gingerbread House Display and Voting">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png">
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Christmas font from Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Custom JavaScript  -->
+    <script type="text/javascript" src="script.js"></script>
 </head>
 
 <body>
-    <h1>Coming Soon!</h1>
 
-    <!-- SVG from svgator.com -->
-    <svg width="700" height="400">
-        <image xlink:href="snow-animation.svg" width="700" height="400" />
-    </svg>
+    <div class="container">
+        <!-- SVG from svgator.com -->
+        <img id="snow-animation" src="snow-animation.svg"/>
+        <div class="centered-overlay">
+            <div>
+                <h2 id="countdown-title">COUNTDOWN</h2>
+            </div>
+            <div id="countdown">
+                <div class="countdown-block">
+                    <p id="days" class="countdown-digit"></p>
+                    <p class="countdown-label">DAYS</p>
+                </div>
+                <div class="countdown-block">
+                    <p id="hours" class="countdown-digit"></p>
+                    <p class="countdown-label">HOURS</p>
+                </div>
+                <div class="countdown-block">
+                    <p id="minutes" class="countdown-digit"></p>
+                    <p class="countdown-label">MINUTES</p>
+                </div>
+                <div class="countdown-block">
+                    <p id="seconds" class="countdown-digit"></p>
+                    <p class="countdown-label">SECONDS</p>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+    <div id="main-content">
+        <h1 id="title">Gingerbread Competition 2024</h1>
+        <p><strong>Date:</strong> November 23, 2024</p>
+        <p><strong>Theme:</strong> "Fictional World"</p>
+        <p><strong>Rules:</strong></p>
+        <ol>
+            <li>All entries must be composed entirely of edible, food-based materials.</li>
+            <li>The use of pre-decorated items is strictly prohibited.</li>
+            <li>Participants are not permitted to commence work prior to the official start time.</li>
+            <li>Contestants must not disclose any information to voters that would identify the creator of an entry.</li>
+        </ol>
+        
+        <div id="footer">
+            <p>gingerbreadvote © 2024</p>
+        </div>
+    </div>
 
     <style>
         body {
             margin: 0;
             padding: 0;
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
             text-align: center;
+            max-width: 800px;
+            margin: auto;
+            background-color: #f5fafe;
         }
 
-        h1 {
-            color: #0099e4;
-            font-size: 64px;
-            font-family: "Mountains of Christmas", serif;
-            font-weight: 700;
+        #snow-animation {
+            width: 100%;
+        }
+        .container {
+            position: relative;
+            text-align: center;
+        }
+        .centered-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width:100%;    
+            height:100%;
+            display: flex;
+            justify-content: start;
+            flex-direction: column;
+            padding-top: 20px;
+        }
+
+        #countdown-title {
+            color: white;
+            font-weight: 100;
+            font-size: 30px;
+            margin: 0;
+            padding: 0;
+        }
+
+        #countdown {
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-size: 45px;
             font-style: normal;
+            color: white;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .countdown-block {
+            flex-grow: 1;
+            flex-basis: 0;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            p {
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        .countdown-digit {
+            font-weight: 500;
+            font-size: 50px;
+        }
+
+        .countdown-label {
+            font-weight: 300;
+            font-size: 16px;
+            color: white;
+        }
+
+        #title {
+            font-weight: 300;
+            font-size: 25px;
+        }
+
+        #main-content {
+            color: #5a5a5a;
+            margin-left: 20px;
+            margin-right: 20px;
+            text-align: left;
+        }
+
+        #footer {
+            margin-top: 80px;
+            text-align: right;
+            opacity: 70%;
         }
     </style>
 
