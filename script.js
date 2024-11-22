@@ -1,7 +1,7 @@
 
 
 function update_countdown() {
-  const start_date_str = "2024-11-23T12:00:00.000+00:00"
+  const start_date_str = "2024-11-24T17:00:00.000+00:00"
   const start_date = new Date(start_date_str)
   const current_date = new Date();
   console.log(start_date.toUTCString())
