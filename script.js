@@ -31,13 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }, 1000);
 
   randomize_entries();
-
-  window.scrollTo(0, 0);
 });
-
-window.onbeforeunload = function(e) {
-  window.scrollTo(0, 0);
-};
 
 const image_counters = new Map([
   ["harry-potter", 0],
