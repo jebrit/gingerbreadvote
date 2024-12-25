@@ -1,5 +1,5 @@
 function update_countdown() {
-  const end_date_str = "2024-12-25T05:00:00.000+00:00"
+  const end_date_str = "2024-12-26T05:00:00.000+00:00"
   const end_date = new Date(end_date_str)
   const current_date = new Date();
   
