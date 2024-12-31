@@ -24,11 +24,11 @@ function randomize_entries() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  update_countdown();
+  // update_countdown();
 
-  setInterval(function () {
-    update_countdown();
-  }, 1000);
+  // setInterval(function () {
+  //   update_countdown();
+  // }, 1000);
 
   randomize_entries();
 });
@@ -79,4 +79,8 @@ function move_slideshow(label, direction=null, target=null) {
     }
   }
   image_counters.set(label, current_image);
+}
+
+function scroll_to_id(id) {
+  document.getElementById(id).scrollIntoView();
 }
