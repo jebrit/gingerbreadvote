@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Gingerbread Vote</title>
+    <meta name="description" content="Gingerbread House Competition Gallery and Voting">
+    <!-- Preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://gingerbreadvote.com/assets/preview.jpg" /> <!-- Christmas Vectors by Vecteezy (vecteezy.com/free-vector/christmas) -->
+    <meta property="og:image:width" content="1920">
+    <meta property="og:image:height" content="1920">
+    <meta property="og:url" content="https://gingerbreadvote.com/">
+    <meta property="og:title" content="Vote Here!"/>
+    <meta property="og:description" content="Gingerbread House Competition"/>
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://gingerbreadvote.com/assets/preview.jpg">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Custom JavaScript -->
+    <script type="text/javascript" src="../script.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="main-card">
+            <!-- Modified SVG from SVGator (svgator.com) -->
+            <img id="snow-animation" src="../assets/snow-animation.svg"/>
+            <div class="centered-overlay">
+                <div>
+                    <h2 id="countdown-title">VOTING CLOSED</h2>
+                </div>
+                <!-- <div id="countdown">
+                    <div class="countdown-block">
+                        <p id="days" class="countdown-digit"></p>
+                        <p class="countdown-label">DAYS</p>
+                    </div>
+                    <div class="countdown-block">
+                        <p id="hours" class="countdown-digit"></p>
+                        <p class="countdown-label">HOURS</p>
+                    </div>
+                    <div class="countdown-block">
+                        <p id="minutes" class="countdown-digit"></p>
+                        <p class="countdown-label">MINUTES</p>
+                    </div>
+                    <div class="countdown-block">
+                        <p id="seconds" class="countdown-digit"></p>
+                        <p class="countdown-label">SECONDS</p>
+                    </div>
+                </div> -->
+            </div>
+            <div class="main-info">
+                <h1 id="title">Gingerbread Competition 2023</h1>
+                <!-- <p>It's time for our annual gingerbread house competition!
+                    This year's theme is 'Fictional Worlds.'
+                    Please participate in our tradition by enjoying and judging our creations.
+                    First admire the gallery of houses below,
+                    then vote for your favorite in the form at the end!
+                    Remember that all houses are entirely composed of edible materials.
+                    Merry Christmas!
+                </p> -->
+                <div class="results-title">
+                    <p class="results-label">Official Results</p>
+                    <p class="results-total">174 Total Votes</p>
+                </div>
+                <a class="result"  onclick="scroll_to_id('empire-state')">
+                    <span>1</span>
+                    <img src="gallery/empire_state/1.jpg">
+                    <p>Empire State Building</p>
+                </a>
+                <a class="result"  onclick="scroll_to_id('surfs-up')">
+                    <span>2</span>
+                    <img src="gallery/surfs_up/1.jpg">
+                    <p>Surf's Up</p>
+                </a>
+                <a class="result"  onclick="scroll_to_id('harry-potter')">
+                    <span>3</span>
+                    <img src="gallery/winter_candyland/1.jpg">
+                    <p>Winter Candyland</p>
+                </a>
+                <a class="result"  onclick="scroll_to_id('taylor-swift-lover')">
+                    <span>4</span>
+                    <img src="gallery/taylor_swift_lover/1.jpg">
+                    <p>Lover (Gingerbread's Version)</p>
+                </a>
+            </div>
+        </div>
+
+        <div id="entries">
+
+
+            <div class="card" id="empire-state">
+                <div class="card-title">
+                    <h1>Empire State Building</h1>
+                    <!-- <img class="logo" src="gallery/empire_state/logo.png" width="90px"> -->
+                </div>
+                <p class="card-text">
+                </p>
+                <div class="image-slideshow">
+                    <button class="image-arrow" onclick="move_slideshow('empire-state', direction=-1)">&#10094;</button>
+                    <div class="main-image" data-index="0">
+                        <img src="gallery/empire_state/1.jpg" class="image-lg shown">
+                        <img src="gallery/empire_state/2.jpg" class="image-lg">
+                        <img src="gallery/empire_state/3.jpg" class="image-lg">
+                        <img src="gallery/empire_state/4.jpg" class="image-lg">
+                        <img src="gallery/empire_state/5.jpg" class="image-lg">
+                    </div>
+                    <button class="image-arrow" onclick="move_slideshow('empire-state', direction=+1)">&#10095;</button>
+                </div>
+                <div class="image-previews">
+                    <img src="gallery/empire_state/1.jpg" onclick="move_slideshow('empire-state', direction=null, target=0)" class="image-sm tall selected-image" >
+                    <img src="gallery/empire_state/2.jpg" onclick="move_slideshow('empire-state', direction=null, target=1)" class="image-sm tall">
+                    <img src="gallery/empire_state/3.jpg" onclick="move_slideshow('empire-state', direction=null, target=2)" class="image-sm tall">
+                    <img src="gallery/empire_state/4.jpg" onclick="move_slideshow('empire-state', direction=null, target=3)" class="image-sm tall">
+                    <img src="gallery/empire_state/5.jpg" onclick="move_slideshow('empire-state', direction=null, target=4)" class="image-sm tall">
+                </div>
+            </div>
+
+
+            <div class="card" id="taylor-swift-lover">
+                <div class="card-title">
+                    <h1>Lover (Gingerbread's Version)</h1>
+                    <!-- <img class="logo" src="gallery/taylor_swift_lover/logo.png" width="100px"> -->
+                </div>
+                <p class="card-text">
+                </p>
+                <div class="image-slideshow">
+                    <button class="image-arrow" onclick="move_slideshow('taylor-swift-lover', direction=-1)">&#10094;</button>
+                    <div class="main-image" data-index="0">
+                        <img src="gallery/taylor_swift_lover/1.jpg" class="image-lg shown">
+                        <img src="gallery/taylor_swift_lover/2.jpg" class="image-lg">
+                        <img src="gallery/taylor_swift_lover/3.jpg" class="image-lg">
+                        <img src="gallery/taylor_swift_lover/4.jpg" class="image-lg">
+                        <img src="gallery/taylor_swift_lover/5.jpg" class="image-lg">
+                    </div>
+                    <button class="image-arrow" onclick="move_slideshow('taylor-swift-lover', direction=+1)">&#10095;</button>
+                </div>
+                <div class="image-previews">
+                    <img src="gallery/taylor_swift_lover/1.jpg" onclick="move_slideshow('taylor-swift-lover', direction=null, target=0)" class="image-sm tall selected-image" >
+                    <img src="gallery/taylor_swift_lover/2.jpg" onclick="move_slideshow('taylor-swift-lover', direction=null, target=1)" class="image-sm tall">
+                    <img src="gallery/taylor_swift_lover/3.jpg" onclick="move_slideshow('taylor-swift-lover', direction=null, target=2)" class="image-sm tall">
+                    <img src="gallery/taylor_swift_lover/4.jpg" onclick="move_slideshow('taylor-swift-lover', direction=null, target=3)" class="image-sm tall">
+                    <img src="gallery/taylor_swift_lover/5.jpg" onclick="move_slideshow('taylor-swift-lover', direction=null, target=4)" class="image-sm tall">
+                </div>
+            </div>
+
+            <div class="card" id="winter-candyland">
+                <div class="card-title">
+                    <h1>Winter Candyland</h1>
+                    <!-- <img class="logo" src="gallery/winter_candyland/logo.png" width="110px"> -->
+                </div>
+                <p class="card-text">
+                </p>
+                <div class="image-slideshow">
+                    <button class="image-arrow" onclick="move_slideshow('winter-candyland', direction=-1)">&#10094;</button>
+                    <div class="main-image" data-index="0">
+                        <img src="gallery/winter_candyland/1.jpg" class="image-lg shown">
+                        <img src="gallery/winter_candyland/2.jpg" class="image-lg">
+                        <img src="gallery/winter_candyland/3.jpg" class="image-lg">
+                        <img src="gallery/winter_candyland/4.jpg" class="image-lg">
+                        <img src="gallery/winter_candyland/5.jpg" class="image-lg">
+                    </div>
+                    <button class="image-arrow" onclick="move_slideshow('winter-candyland', direction=+1)">&#10095;</button>
+                </div>
+                <div class="image-previews">
+                    <img src="gallery/winter_candyland/1.jpg" onclick="move_slideshow('winter-candyland', direction=null, target=0)" class="image-sm wide selected-image" >
+                    <img src="gallery/winter_candyland/2.jpg" onclick="move_slideshow('winter-candyland', direction=null, target=1)" class="image-sm wide">
+                    <img src="gallery/winter_candyland/3.jpg" onclick="move_slideshow('winter-candyland', direction=null, target=2)" class="image-sm wide">
+                    <img src="gallery/winter_candyland/4.jpg" onclick="move_slideshow('winter-candyland', direction=null, target=3)" class="image-sm wide">
+                    <img src="gallery/winter_candyland/5.jpg" onclick="move_slideshow('winter-candyland', direction=null, target=4)" class="image-sm wide">
+                </div>
+            </div>
+
+            <div class="card" id="surfs-up">
+                <div class="card-title">
+                    <h1>Surf's Up</h1>
+                    <!-- <img class="logo" src="gallery/surfs_up/logo.png" width="90px"> -->
+                </div>
+                <p class="card-text">
+                </p>
+                <div class="image-slideshow">
+                    <button class="image-arrow" onclick="move_slideshow('surfs-up', direction=-1)">&#10094;</button>
+                    <div class="main-image" data-index="0">
+                        <img src="gallery/surfs_up/1.jpg" class="image-lg shown">
+                        <img src="gallery/surfs_up/2.jpg" class="image-lg">
+                        <img src="gallery/surfs_up/3.jpg" class="image-lg">
+                    </div>
+                    <button class="image-arrow" onclick="move_slideshow('surfs-up', direction=+1)">&#10095;</button>
+                </div>
+                <div class="image-previews">
+                    <img src="gallery/surfs_up/1.jpg" onclick="move_slideshow('surfs-up', direction=null, target=0)" class="image-sm wide selected-image" >
+                    <img src="gallery/surfs_up/2.jpg" onclick="move_slideshow('surfs-up', direction=null, target=1)" class="image-sm wide">
+                    <img src="gallery/surfs_up/3.jpg" onclick="move_slideshow('surfs-up', direction=null, target=2)" class="image-sm wide">
+                </div>
+            </div>
+
+            <div class="card" id="sheep-cottage">
+                <div class="card-title">
+                    <h1>Little Winter Sheep Cottage</h1>
+                    <!-- <img class="logo" src="gallery/sheep_cottage/logo.png" width="120px"> -->
+                </div>
+                <p class="card-text"></p>
+                <div class="image-slideshow">
+                    <button class="image-arrow" onclick="move_slideshow('sheep-cottage', direction=-1)">&#10094;</button>
+                    <div class="main-image" data-index="0">
+                        <img src="gallery/sheep_cottage/1.jpg" class="image-lg shown">
+                        <img src="gallery/sheep_cottage/2.jpg" class="image-lg">
+                        <img src="gallery/sheep_cottage/3.jpg" class="image-lg">
+                        <img src="gallery/sheep_cottage/4.jpg" class="image-lg">
+                    </div>
+                    <button class="image-arrow" onclick="move_slideshow('sheep-cottage', direction=+1)">&#10095;</button>
+                </div>
+                <div class="image-previews">
+                    <img src="gallery/sheep_cottage/1.jpg" onclick="move_slideshow('sheep-cottage', direction=null, target=0)" class="image-sm wide selected-image" >
+                    <img src="gallery/sheep_cottage/2.jpg" onclick="move_slideshow('sheep-cottage', direction=null, target=1)" class="image-sm wide">
+                    <img src="gallery/sheep_cottage/3.jpg" onclick="move_slideshow('sheep-cottage', direction=null, target=2)" class="image-sm wide">
+                    <img src="gallery/sheep_cottage/4.jpg" onclick="move_slideshow('sheep-cottage', direction=null, target=3)" class="image-sm wide">
+                </div>
+            </div>
+
+            <div class="card" id="japan-inner-peace">
+                <div class="card-title">
+                    <h1>Inner Peace</h1>
+                    <!-- <img class="logo" src="gallery/japan_inner_peace/logo.png" width="100px"> -->
+                </div>
+                <p class="card-text">
+                </p>
+                <div class="image-slideshow">
+                    <button class="image-arrow" onclick="move_slideshow('japan-inner-peace', direction=-1)">&#10094;</button>
+                    <div class="main-image" data-index="0">
+                        <img src="gallery/japan_inner_peace/1.jpg" class="image-lg shown">
+                        <img src="gallery/japan_inner_peace/2.jpg" class="image-lg">
+                        <img src="gallery/japan_inner_peace/3.jpg" class="image-lg">
+                    </div>
+                    <button class="image-arrow" onclick="move_slideshow('japan-inner-peace', direction=+1)">&#10095;</button>
+                </div>
+                <div class="image-previews">
+                    <img src="gallery/japan_inner_peace/1.jpg" onclick="move_slideshow('japan-inner-peace', direction=null, target=0)" class="image-sm tall selected-image" >
+                    <img src="gallery/japan_inner_peace/2.jpg" onclick="move_slideshow('japan-inner-peace', direction=null, target=1)" class="image-sm tall">
+                    <img src="gallery/japan_inner_peace/3.jpg" onclick="move_slideshow('japan-inner-peace', direction=null, target=2)" class="image-sm tall">
+                </div>
+            </div>
+
+            <div class="card" id="bears-house">
+                <div class="card-title">
+                    <h1>Bear's House</h1>
+                    <!-- <img class="logo" src="gallery/bears_house/logo.png" width="100px"> -->
+                </div>
+                <p class="card-text"></p>
+                <div class="image-slideshow">
+                    <button class="image-arrow" onclick="move_slideshow('bears-house', direction=-1)">&#10094;</button>
+                    <div class="main-image" data-index="0">
+                        <img src="gallery/bears_house/1.jpg" class="image-lg shown">
+                        <img src="gallery/bears_house/2.jpg" class="image-lg">
+                        <img src="gallery/bears_house/3.jpg" class="image-lg">
+                        <img src="gallery/bears_house/4.jpg" class="image-lg">
+                    </div>
+                    <button class="image-arrow" onclick="move_slideshow('bears-house', direction=+1)">&#10095;</button>
+                </div>
+                <div class="image-previews">
+                    <img src="gallery/bears_house/1.jpg" onclick="move_slideshow('bears-house', direction=null, target=0)" class="image-sm tall selected-image" >
+                    <img src="gallery/bears_house/2.jpg" onclick="move_slideshow('bears-house', direction=null, target=1)" class="image-sm tall">
+                    <img src="gallery/bears_house/3.jpg" onclick="move_slideshow('bears-house', direction=null, target=2)" class="image-sm tall">
+                    <img src="gallery/bears_house/4.jpg" onclick="move_slideshow('bears-house', direction=null, target=3)" class="image-sm tall">
+                </div>
+            </div>
+
+
+        </div>
+
+        <div id="footer">
+            <p>gingerbreadvote © 2024  |  <a href="https://github.com/jebrit/gingerbreadvote" target="_blank">source</a> </p>
+        </div>
+    </div>
+</body>
+
+</html>
