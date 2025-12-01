@@ -1,10 +1,9 @@
-function update_countdown() {
-  const end_date_str = "2024-12-26T05:00:00.000+00:00"
+function update_countdown(end_date_str) {
   const end_date = new Date(end_date_str)
   const current_date = new Date();
-  
+
   difference_seconds = Math.max(Math.floor((end_date - current_date) / 1000), 0);
-  
+
   const seconds = Math.floor(difference_seconds) % 60;
   const minutes = Math.floor(difference_seconds / 60) % 60;
   const hours = Math.floor(difference_seconds / (60*60)) % 24;
@@ -16,6 +15,13 @@ function update_countdown() {
   document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
 }
 
+function start_countdown(end_date_str) {
+  update_countdown(end_date_str);
+  setInterval(function () {
+    update_countdown(end_date_str);
+  }, 1000);
+}
+
 function randomize_entries() {
   const entry_cards = document.getElementById("entries").children;
   for (let i = 0; i < entry_cards.length; i++) {
@@ -24,47 +30,37 @@ function randomize_entries() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  // update_countdown();
-
-  // setInterval(function () {
-  //   update_countdown();
-  // }, 1000);
-
+  start_countdown("2025-12-26T05:00:00.000+00:00");
   randomize_entries();
 });
 
-const image_counters = new Map([
-  ["harry-potter", 0],
-  ["lord-of-the-rings", 0],
-  ["narnia", 0],
-  ["shrek", 0],
-  ["spongebob", 0],
-  ["star-wars", 0],
-  ["wonka", 0],
-]);
-
 function move_slideshow(label, direction=null, target=null) {
-  let current_image = image_counters.get(label);
+
+  const card_element = document.getElementById(label);
+  const main_image_div = card_element.getElementsByClassName("main-image")[0];
+  const previous_image_index = parseInt(main_image_div.dataset.index);
+  let new_image_index = previous_image_index;
+
   if (direction != null) {
-    current_image = current_image + direction;
+    new_image_index = previous_image_index + direction;
   } else if (target != null) {
-    current_image = target;
+    new_image_index = target;
   } else {
     return;
   }
-  const card_element = document.getElementById(label);
+
   const main_image_elements = card_element.getElementsByClassName("image-lg");
   const image_list_elements = card_element.getElementsByClassName("image-sm");
   if (image_list_elements.length < 2)
     return;
-  if (current_image < 0) {
-    current_image = image_list_elements.length - 1;
-  } else if (current_image >= image_list_elements.length) {
-    current_image = 0;
+  if (new_image_index < 0) {
+    new_image_index = image_list_elements.length - 1;
+  } else if (new_image_index >= image_list_elements.length) {
+    new_image_index = 0;
   }
   let matching_src = "";
   for (let i = 0; i < image_list_elements.length; i++) {
-    if (i == current_image) {
+    if (i == new_image_index) {
       image_list_elements[i].classList.add("selected-image");
       matching_src = image_list_elements[i].src;
     } else {
@@ -78,7 +74,7 @@ function move_slideshow(label, direction=null, target=null) {
       main_image_elements[i].classList.remove("shown");
     }
   }
-  image_counters.set(label, current_image);
+  main_image_div.dataset.index = new_image_index;
 }
 
 function scroll_to_id(id) {
