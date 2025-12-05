@@ -167,6 +167,7 @@ a {
 }
 
 .navbar a {
+  font-size: 20px;
   padding: 10px;
   flex-grow: 1;
   flex-basis: 0;
@@ -190,7 +191,7 @@ a {
 
 
 #footer {
-  margin-top: 80px;
+  margin-top: 50px;
   text-align: right;
   opacity: 70%;
 }
@@ -335,6 +336,13 @@ a {
   }
   .countdown-label {
     font-size: 12px;
+  }
+  .navbar {
+     gap: 5px;
+  }
+  .navbar a {
+    font-size: 12px;
+    padding: 5px;
   }
 }
 
