@@ -29,11 +29,6 @@ function randomize_entries() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  start_countdown("2025-12-26T05:00:00.000+00:00");
-  randomize_entries();
-});
-
 function move_slideshow(label, direction=null, target=null) {
 
   const card_element = document.getElementById(label);
