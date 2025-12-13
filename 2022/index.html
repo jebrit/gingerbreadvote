@@ -16,7 +16,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://gingerbreadvote.com/assets/preview.jpg">
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="../assets/favicon.png">
+    <link rel="icon" type="image/png" href="/assets/favicon.png">
     <!-- Responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google Fonts -->
@@ -24,9 +24,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <!-- Custom JavaScript -->
-    <script type="text/javascript" src="../script.js"></script>
+    <script type="text/javascript" src="/script.js"></script>
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="/styles.css">
 </head>
 
 <body>
@@ -42,7 +42,7 @@
 
         <div class="main-card">
             <!-- Modified SVG from SVGator (svgator.com) -->
-            <img id="snow-animation" src="../assets/snow-animation.svg"/>
+            <img id="snow-animation" src="/assets/snow-animation.svg"/>
             <div class="centered-overlay">
                 <div>
                     <h2 id="countdown-title">VOTING RESULTS POSTED</h2>
@@ -58,22 +58,22 @@
                 </div>
                 <a class="result"  onclick="scroll_to_id('woodland-tree-house')">
                     <span>1</span>
-                    <img src="gallery/tree_house/1.jpg">
+                    <img src="./gallery/tree_house/1.jpg">
                     <p>Winter Woodland Treehouse</p>
                 </a>
                 <a class="result"  onclick="scroll_to_id('capitol')">
                     <span>2</span>
-                    <img src="gallery/capitol/1.jpg">
+                    <img src="./gallery/capitol/1.jpg">
                     <p>Christmas with a <em>Capitol</em> C</p>
                 </a>
                 <a class="result"  onclick="scroll_to_id('harry-potter')">
                     <span>3</span>
-                    <img src="gallery/candy_cane/1.jpg">
+                    <img src="./gallery/candy_cane/1.jpg">
                     <p>Swirly Whirly Candy Cane Forest Castle Slay</p>
                 </a>
                 <a class="result"  onclick="scroll_to_id('hospital')">
                     <span>4</span>
-                    <img src="gallery/hospital/1.jpg">
+                    <img src="./gallery/hospital/1.jpg">
                     <p>HO HO Hospital</p>
                 </a>
             </div>
@@ -91,16 +91,16 @@
                 <div class="image-slideshow">
                     <button class="image-arrow" onclick="move_slideshow('woodland-tree-house', direction=-1)">&#10094;</button>
                     <div class="main-image" data-index="0">
-                        <img src="gallery/tree_house/1.jpg" class="image-lg shown">
-                        <img src="gallery/tree_house/2.jpg" class="image-lg">
-                        <img src="gallery/tree_house/3.jpg" class="image-lg">
+                        <img src="./gallery/tree_house/1.jpg" class="image-lg shown">
+                        <img src="./gallery/tree_house/2.jpg" class="image-lg">
+                        <img src="./gallery/tree_house/3.jpg" class="image-lg">
                     </div>
                     <button class="image-arrow" onclick="move_slideshow('woodland-tree-house', direction=+1)">&#10095;</button>
                 </div>
                 <div class="image-previews">
-                    <img src="gallery/tree_house/1.jpg" onclick="move_slideshow('woodland-tree-house', direction=null, target=0)" class="image-sm tall selected-image" >
-                    <img src="gallery/tree_house/2.jpg" onclick="move_slideshow('woodland-tree-house', direction=null, target=1)" class="image-sm tall">
-                    <img src="gallery/tree_house/3.jpg" onclick="move_slideshow('woodland-tree-house', direction=null, target=2)" class="image-sm tall">
+                    <img src="./gallery/tree_house/1.jpg" onclick="move_slideshow('woodland-tree-house', direction=null, target=0)" class="image-sm tall selected-image" >
+                    <img src="./gallery/tree_house/2.jpg" onclick="move_slideshow('woodland-tree-house', direction=null, target=1)" class="image-sm tall">
+                    <img src="./gallery/tree_house/3.jpg" onclick="move_slideshow('woodland-tree-house', direction=null, target=2)" class="image-sm tall">
                 </div>
             </div>
 
@@ -113,16 +113,16 @@
                 <div class="image-slideshow">
                     <button class="image-arrow" onclick="move_slideshow('capitol', direction=-1)">&#10094;</button>
                     <div class="main-image" data-index="0">
-                        <img src="gallery/capitol/1.jpg" class="image-lg shown">
-                        <img src="gallery/capitol/2.jpg" class="image-lg">
-                        <img src="gallery/capitol/3.jpg" class="image-lg">
+                        <img src="./gallery/capitol/1.jpg" class="image-lg shown">
+                        <img src="./gallery/capitol/2.jpg" class="image-lg">
+                        <img src="./gallery/capitol/3.jpg" class="image-lg">
                     </div>
                     <button class="image-arrow" onclick="move_slideshow('capitol', direction=+1)">&#10095;</button>
                 </div>
                 <div class="image-previews">
-                    <img src="gallery/capitol/1.jpg" onclick="move_slideshow('capitol', direction=null, target=0)" class="image-sm wide selected-image" >
-                    <img src="gallery/capitol/2.jpg" onclick="move_slideshow('capitol', direction=null, target=1)" class="image-sm wide">
-                    <img src="gallery/capitol/3.jpg" onclick="move_slideshow('capitol', direction=null, target=2)" class="image-sm wide">
+                    <img src="./gallery/capitol/1.jpg" onclick="move_slideshow('capitol', direction=null, target=0)" class="image-sm wide selected-image" >
+                    <img src="./gallery/capitol/2.jpg" onclick="move_slideshow('capitol', direction=null, target=1)" class="image-sm wide">
+                    <img src="./gallery/capitol/3.jpg" onclick="move_slideshow('capitol', direction=null, target=2)" class="image-sm wide">
                 </div>
             </div>
 
@@ -135,20 +135,20 @@
                 <div class="image-slideshow">
                     <button class="image-arrow" onclick="move_slideshow('winter-candyland', direction=-1)">&#10094;</button>
                     <div class="main-image" data-index="0">
-                        <img src="gallery/candy_cane/1.jpg" class="image-lg shown">
-                        <img src="gallery/candy_cane/2.jpg" class="image-lg">
-                        <img src="gallery/candy_cane/3.jpg" class="image-lg">
-                        <img src="gallery/candy_cane/4.jpg" class="image-lg">
-                        <img src="gallery/candy_cane/5.jpg" class="image-lg">
+                        <img src="./gallery/candy_cane/1.jpg" class="image-lg shown">
+                        <img src="./gallery/candy_cane/2.jpg" class="image-lg">
+                        <img src="./gallery/candy_cane/3.jpg" class="image-lg">
+                        <img src="./gallery/candy_cane/4.jpg" class="image-lg">
+                        <img src="./gallery/candy_cane/5.jpg" class="image-lg">
                     </div>
                     <button class="image-arrow" onclick="move_slideshow('winter-candyland', direction=+1)">&#10095;</button>
                 </div>
                 <div class="image-previews">
-                    <img src="gallery/candy_cane/1.jpg" onclick="move_slideshow('winter-candyland', direction=null, target=0)" class="image-sm tall selected-image" >
-                    <img src="gallery/candy_cane/2.jpg" onclick="move_slideshow('winter-candyland', direction=null, target=1)" class="image-sm tall">
-                    <img src="gallery/candy_cane/3.jpg" onclick="move_slideshow('winter-candyland', direction=null, target=2)" class="image-sm tall">
-                    <img src="gallery/candy_cane/4.jpg" onclick="move_slideshow('winter-candyland', direction=null, target=3)" class="image-sm tall">
-                    <img src="gallery/candy_cane/5.jpg" onclick="move_slideshow('winter-candyland', direction=null, target=4)" class="image-sm tall">
+                    <img src="./gallery/candy_cane/1.jpg" onclick="move_slideshow('winter-candyland', direction=null, target=0)" class="image-sm tall selected-image" >
+                    <img src="./gallery/candy_cane/2.jpg" onclick="move_slideshow('winter-candyland', direction=null, target=1)" class="image-sm tall">
+                    <img src="./gallery/candy_cane/3.jpg" onclick="move_slideshow('winter-candyland', direction=null, target=2)" class="image-sm tall">
+                    <img src="./gallery/candy_cane/4.jpg" onclick="move_slideshow('winter-candyland', direction=null, target=3)" class="image-sm tall">
+                    <img src="./gallery/candy_cane/5.jpg" onclick="move_slideshow('winter-candyland', direction=null, target=4)" class="image-sm tall">
                 </div>
             </div>
 
@@ -161,16 +161,16 @@
                 <div class="image-slideshow">
                     <button class="image-arrow" onclick="move_slideshow('hospital', direction=-1)">&#10094;</button>
                     <div class="main-image" data-index="0">
-                        <img src="gallery/hospital/1.jpg" class="image-lg shown">
-                        <img src="gallery/hospital/2.jpg" class="image-lg">
-                        <img src="gallery/hospital/3.jpg" class="image-lg">
+                        <img src="./gallery/hospital/1.jpg" class="image-lg shown">
+                        <img src="./gallery/hospital/2.jpg" class="image-lg">
+                        <img src="./gallery/hospital/3.jpg" class="image-lg">
                     </div>
                     <button class="image-arrow" onclick="move_slideshow('hospital', direction=+1)">&#10095;</button>
                 </div>
                 <div class="image-previews">
-                    <img src="gallery/hospital/1.jpg" onclick="move_slideshow('hospital', direction=null, target=0)" class="image-sm tall selected-image" >
-                    <img src="gallery/hospital/2.jpg" onclick="move_slideshow('hospital', direction=null, target=1)" class="image-sm tall">
-                    <img src="gallery/hospital/3.jpg" onclick="move_slideshow('hospital', direction=null, target=2)" class="image-sm tall">
+                    <img src="./gallery/hospital/1.jpg" onclick="move_slideshow('hospital', direction=null, target=0)" class="image-sm tall selected-image" >
+                    <img src="./gallery/hospital/2.jpg" onclick="move_slideshow('hospital', direction=null, target=1)" class="image-sm tall">
+                    <img src="./gallery/hospital/3.jpg" onclick="move_slideshow('hospital', direction=null, target=2)" class="image-sm tall">
                 </div>
             </div>
 
@@ -183,14 +183,14 @@
                 <div class="image-slideshow">
                     <button class="image-arrow" onclick="move_slideshow('modulaire', direction=-1)">&#10094;</button>
                     <div class="main-image" data-index="0">
-                        <img src="gallery/modulaire/1.jpg" class="image-lg shown">
-                        <img src="gallery/modulaire/2.jpg" class="image-lg">
+                        <img src="./gallery/modulaire/1.jpg" class="image-lg shown">
+                        <img src="./gallery/modulaire/2.jpg" class="image-lg">
                     </div>
                     <button class="image-arrow" onclick="move_slideshow('modulaire', direction=+1)">&#10095;</button>
                 </div>
                 <div class="image-previews">
-                    <img src="gallery/modulaire/1.jpg" onclick="move_slideshow('modulaire', direction=null, target=0)" class="image-sm tall selected-image" >
-                    <img src="gallery/modulaire/2.jpg" onclick="move_slideshow('modulaire', direction=null, target=1)" class="image-sm tall">
+                    <img src="./gallery/modulaire/1.jpg" onclick="move_slideshow('modulaire', direction=null, target=0)" class="image-sm tall selected-image" >
+                    <img src="./gallery/modulaire/2.jpg" onclick="move_slideshow('modulaire', direction=null, target=1)" class="image-sm tall">
                 </div>
             </div>
 
@@ -202,14 +202,14 @@
                 <div class="image-slideshow">
                     <button class="image-arrow" onclick="move_slideshow('tibetan-ranch', direction=-1)">&#10094;</button>
                     <div class="main-image" data-index="0">
-                        <img src="gallery/tibetan_ranch/1.jpg" class="image-lg shown">
-                        <img src="gallery/tibetan_ranch/2.jpg" class="image-lg">
+                        <img src="./gallery/tibetan_ranch/1.jpg" class="image-lg shown">
+                        <img src="./gallery/tibetan_ranch/2.jpg" class="image-lg">
                     </div>
                     <button class="image-arrow" onclick="move_slideshow('tibetan-ranch', direction=+1)">&#10095;</button>
                 </div>
                 <div class="image-previews">
-                    <img src="gallery/tibetan_ranch/1.jpg" onclick="move_slideshow('tibetan-ranch', direction=null, target=0)" class="image-sm tall selected-image" >
-                    <img src="gallery/tibetan_ranch/2.jpg" onclick="move_slideshow('tibetan-ranch', direction=null, target=1)" class="image-sm tall">
+                    <img src="./gallery/tibetan_ranch/1.jpg" onclick="move_slideshow('tibetan-ranch', direction=null, target=0)" class="image-sm tall selected-image" >
+                    <img src="./gallery/tibetan_ranch/2.jpg" onclick="move_slideshow('tibetan-ranch', direction=null, target=1)" class="image-sm tall">
                 </div>
             </div>
 
