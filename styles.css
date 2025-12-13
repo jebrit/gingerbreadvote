@@ -157,6 +157,19 @@ a {
   font-size: 25px;
 }
 
+.card:has(.card-notice) {
+  padding-bottom: 0px;
+}
+
+.card-notice {
+  margin-top: 10px;
+  background-color: rgb(255, 222, 227);
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .navbar {
   display: flex;
   flex-direction: row;
