@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Gingerbread Vote</title>
+    <meta name="description" content="Gingerbread House Competition Gallery and Voting">
+    <!-- Preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://gingerbreadvote.com/assets/preview.jpg" /> <!-- Christmas Vectors by Vecteezy (vecteezy.com/free-vector/christmas) -->
+    <meta property="og:image:width" content="1920">
+    <meta property="og:image:height" content="1920">
+    <meta property="og:url" content="https://gingerbreadvote.com/">
+    <meta property="og:title" content="Vote Here!"/>
+    <meta property="og:description" content="Gingerbread House Competition"/>
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://gingerbreadvote.com/assets/preview.jpg">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/favicon.png">
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Custom JavaScript -->
+    <script type="text/javascript" src="/script.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+
+
+    <div class="container">
+
+        <div class="card navbar">
+            <a href="/">2025</a>
+            <a href="/2024/">2024</a>
+            <a href="/2023/">2023</a>
+            <a href="/2022/">2022</a>
+        </div>
+
+        <div class="main-card">
+            <!-- Modified SVG from SVGator (svgator.com) -->
+            <img id="snow-animation" src="/assets/snow-animation.svg"/>
+            <div class="centered-overlay">
+                <div>
+                    <h2 id="countdown-title">VOTING OPENS SOON</h2>
+                </div>
+                <div id="countdown">
+                    <div class="countdown-block">
+                        <p id="days" class="countdown-digit"></p>
+                        <p class="countdown-label">DAYS</p>
+                    </div>
+                    <div class="countdown-block">
+                        <p id="hours" class="countdown-digit"></p>
+                        <p class="countdown-label">HOURS</p>
+                    </div>
+                    <div class="countdown-block">
+                        <p id="minutes" class="countdown-digit"></p>
+                        <p class="countdown-label">MINUTES</p>
+                    </div>
+                    <div class="countdown-block">
+                        <p id="seconds" class="countdown-digit"></p>
+                        <p class="countdown-label">SECONDS</p>
+                    </div>
+                </div>
+            </div>
+            <div class="main-info">
+                <h1 id="title">Gingerbread Competition 2025 (DRAFT)</h1>
+                <!-- <p>It's time for our annual gingerbread house competition!
+                    This year there was no theme.
+                    Please participate in our tradition by enjoying and judging our creations.
+                    First admire the gallery of houses below,
+                    then vote for your favorite in the form at the end!
+                    Remember that all houses are entirely composed of edible materials.
+                    Merry Christmas!
+                </p> -->
+
+            </div>
+        </div>
+
+        <div id="entries">
+
+            <div class="card" id="wicked-library">
+                <div class="card-title">
+                    <h1>Wicked Library</h1>
+                    <!-- <img class="logo" src="../gallery/wicked_library/logo.png" width="90px"> -->
+                </div>
+                <p class="card-text">placeholder text
+                </p>
+                <div class="image-slideshow">
+                    <button class="image-arrow" onclick="move_slideshow('wicked-library', direction=-1)">&#10094;</button>
+                    <div class="main-image" data-index="0">
+                        <img src="../gallery/wicked_library/1.jpg" class="image-lg shown">
+                        <img src="../gallery/wicked_library/2.jpg" class="image-lg">
+                        <img src="../gallery/wicked_library/3.jpg" class="image-lg">
+                        <img src="../gallery/wicked_library/4.jpg" class="image-lg">
+                        <img src="../gallery/wicked_library/5.jpg" class="image-lg">
+                        <img src="../gallery/wicked_library/6.jpg" class="image-lg">
+                        <img src="../gallery/wicked_library/7.jpg" class="image-lg">
+                    </div>
+                    <button class="image-arrow" onclick="move_slideshow('wicked-library', direction=+1)">&#10095;</button>
+                </div>
+                <div class="image-previews">
+                    <img src="../gallery/wicked_library/1.jpg" onclick="move_slideshow('wicked-library', direction=null, target=0)" class="image-sm wide selected-image" >
+                    <img src="../gallery/wicked_library/2.jpg" onclick="move_slideshow('wicked-library', direction=null, target=1)" class="image-sm wide">
+                    <img src="../gallery/wicked_library/3.jpg" onclick="move_slideshow('wicked-library', direction=null, target=2)" class="image-sm wide">
+                    <img src="../gallery/wicked_library/4.jpg" onclick="move_slideshow('wicked-library', direction=null, target=3)" class="image-sm wide">
+                    <img src="../gallery/wicked_library/5.jpg" onclick="move_slideshow('wicked-library', direction=null, target=4)" class="image-sm wide">
+                    <img src="../gallery/wicked_library/6.jpg" onclick="move_slideshow('wicked-library', direction=null, target=5)" class="image-sm wide">
+                    <img src="../gallery/wicked_library/7.jpg" onclick="move_slideshow('wicked-library', direction=null, target=6)" class="image-sm wide">
+                </div>
+            </div>
+
+            <div class="card" id="theme-park">
+                <div class="card-title">
+                    <h1>Theme Park</h1>
+                    <!-- <img class="logo" src="../gallery/theme_park/logo.png" width="90px"> -->
+                </div>
+                <p class="card-text">placeholder text
+                </p>
+                <div class="image-slideshow">
+                    <button class="image-arrow" onclick="move_slideshow('theme-park', direction=-1)">&#10094;</button>
+                    <div class="main-image" data-index="0">
+                        <img src="../gallery/theme_park/1.jpg" class="image-lg shown">
+                        <img src="../gallery/theme_park/2.jpg" class="image-lg">
+                        <img src="../gallery/theme_park/3.jpg" class="image-lg">
+                        <img src="../gallery/theme_park/4.jpg" class="image-lg">
+                        <img src="../gallery/theme_park/5.jpg" class="image-lg">
+                        <img src="../gallery/theme_park/6.jpg" class="image-lg">
+                        <img src="../gallery/theme_park/7.jpg" class="image-lg">
+                    </div>
+                    <button class="image-arrow" onclick="move_slideshow('theme-park', direction=+1)">&#10095;</button>
+                </div>
+                <div class="image-previews">
+                    <img src="../gallery/theme_park/1.jpg" onclick="move_slideshow('theme-park', direction=null, target=0)" class="image-sm tall selected-image" >
+                    <img src="../gallery/theme_park/2.jpg" onclick="move_slideshow('theme-park', direction=null, target=1)" class="image-sm tall">
+                    <img src="../gallery/theme_park/3.jpg" onclick="move_slideshow('theme-park', direction=null, target=2)" class="image-sm tall">
+                    <img src="../gallery/theme_park/4.jpg" onclick="move_slideshow('theme-park', direction=null, target=3)" class="image-sm tall">
+                    <img src="../gallery/theme_park/5.jpg" onclick="move_slideshow('theme-park', direction=null, target=4)" class="image-sm tall">
+                    <img src="../gallery/theme_park/6.jpg" onclick="move_slideshow('theme-park', direction=null, target=5)" class="image-sm tall">
+                    <img src="../gallery/theme_park/7.jpg" onclick="move_slideshow('theme-park', direction=null, target=6)" class="image-sm tall">
+                </div>
+            </div>
+
+            <div class="card" id="barn">
+                <div class="card-title">
+                    <h1>Barn</h1>
+                    <!-- <img class="logo" src="../gallery/barn/logo.png" width="90px"> -->
+                </div>
+                <p class="card-text">placeholder text
+                </p>
+                <div class="image-slideshow">
+                    <button class="image-arrow" onclick="move_slideshow('barn', direction=-1)">&#10094;</button>
+                    <div class="main-image" data-index="0">
+                        <img src="../gallery/barn/1.jpg" class="image-lg shown">
+                        <img src="../gallery/barn/2.jpg" class="image-lg">
+                        <img src="../gallery/barn/3.jpg" class="image-lg">
+                        <img src="../gallery/barn/4.jpg" class="image-lg">
+                        <img src="../gallery/barn/5.jpg" class="image-lg">
+                        <img src="../gallery/barn/6.jpg" class="image-lg">
+                    </div>
+                    <button class="image-arrow" onclick="move_slideshow('barn', direction=+1)">&#10095;</button>
+                </div>
+                <div class="image-previews">
+                    <img src="../gallery/barn/1.jpg" onclick="move_slideshow('barn', direction=null, target=0)" class="image-sm wide selected-image" >
+                    <img src="../gallery/barn/2.jpg" onclick="move_slideshow('barn', direction=null, target=1)" class="image-sm wide">
+                    <img src="../gallery/barn/3.jpg" onclick="move_slideshow('barn', direction=null, target=2)" class="image-sm wide">
+                    <img src="../gallery/barn/4.jpg" onclick="move_slideshow('barn', direction=null, target=3)" class="image-sm wide">
+                    <img src="../gallery/barn/5.jpg" onclick="move_slideshow('barn', direction=null, target=4)" class="image-sm wide">
+                    <img src="../gallery/barn/6.jpg" onclick="move_slideshow('barn', direction=null, target=5)" class="image-sm wide">
+                </div>
+            </div>
+
+            <div class="card" id="elf">
+                <div class="card-title">
+                    <h1>Elf</h1>
+                    <!-- <img class="logo" src="../gallery/elf/logo.png" width="90px"> -->
+                </div>
+                <p class="card-text">placeholder text
+                </p>
+                <div class="image-slideshow">
+                    <button class="image-arrow" onclick="move_slideshow('elf', direction=-1)">&#10094;</button>
+                    <div class="main-image" data-index="0">
+                        <img src="../gallery/elf/1.jpg" class="image-lg shown">
+                        <img src="../gallery/elf/2.jpg" class="image-lg">
+                        <img src="../gallery/elf/3.jpg" class="image-lg">
+                        <img src="../gallery/elf/4.jpg" class="image-lg">
+                        <img src="../gallery/elf/5.jpg" class="image-lg">
+                    </div>
+                    <button class="image-arrow" onclick="move_slideshow('elf', direction=+1)">&#10095;</button>
+                </div>
+                <div class="image-previews">
+                    <img src="../gallery/elf/1.jpg" onclick="move_slideshow('elf', direction=null, target=0)" class="image-sm tall selected-image" >
+                    <img src="../gallery/elf/2.jpg" onclick="move_slideshow('elf', direction=null, target=1)" class="image-sm tall">
+                    <img src="../gallery/elf/3.jpg" onclick="move_slideshow('elf', direction=null, target=2)" class="image-sm tall">
+                    <img src="../gallery/elf/4.jpg" onclick="move_slideshow('elf', direction=null, target=3)" class="image-sm tall">
+                    <img src="../gallery/elf/5.jpg" onclick="move_slideshow('elf', direction=null, target=4)" class="image-sm tall">
+                </div>
+            </div>
+
+            <div class="card" id="windmill">
+                <div class="card-title">
+                    <h1>Windmill</h1>
+                    <!-- <img class="logo" src="../gallery/windmill/logo.png" width="90px"> -->
+                </div>
+                <p class="card-text">placeholder text
+                </p>
+                <div class="image-slideshow">
+                    <button class="image-arrow" onclick="move_slideshow('windmill', direction=-1)">&#10094;</button>
+                    <div class="main-image" data-index="0">
+                        <img src="../gallery/windmill/1.jpg" class="image-lg shown">
+                        <img src="../gallery/windmill/2.jpg" class="image-lg">
+                        <img src="../gallery/windmill/3.jpg" class="image-lg">
+                        <img src="../gallery/windmill/4.jpg" class="image-lg">
+                    </div>
+                    <button class="image-arrow" onclick="move_slideshow('windmill', direction=+1)">&#10095;</button>
+                </div>
+                <div class="image-previews">
+                    <img src="../gallery/windmill/1.jpg" onclick="move_slideshow('windmill', direction=null, target=0)" class="image-sm tall selected-image" >
+                    <img src="../gallery/windmill/2.jpg" onclick="move_slideshow('windmill', direction=null, target=1)" class="image-sm tall">
+                    <img src="../gallery/windmill/3.jpg" onclick="move_slideshow('windmill', direction=null, target=2)" class="image-sm tall">
+                    <img src="../gallery/windmill/4.jpg" onclick="move_slideshow('windmill', direction=null, target=3)" class="image-sm tall">
+                </div>
+            </div>
+
+            <div class="card" id="candy-cane-castle">
+                <div class="card-title">
+                    <h1>Candy Cane Castle</h1>
+                    <!-- <img class="logo" src="../gallery/candy_cane_castle/logo.png" width="90px"> -->
+                </div>
+                <p class="card-text">placeholder text
+                </p>
+                <div class="image-slideshow">
+                    <button class="image-arrow" onclick="move_slideshow('candy-cane-castle', direction=-1)">&#10094;</button>
+                    <div class="main-image" data-index="0">
+                        <img src="../gallery/candy_cane_castle/1.jpg" class="image-lg shown">
+                        <img src="../gallery/candy_cane_castle/2.jpg" class="image-lg">
+                        <img src="../gallery/candy_cane_castle/3.jpg" class="image-lg">
+                        <img src="../gallery/candy_cane_castle/4.jpg" class="image-lg">
+                    </div>
+                    <button class="image-arrow" onclick="move_slideshow('candy-cane-castle', direction=+1)">&#10095;</button>
+                </div>
+                <div class="image-previews">
+                    <img src="../gallery/candy_cane_castle/1.jpg" onclick="move_slideshow('candy-cane-castle', direction=null, target=0)" class="image-sm wide selected-image" >
+                    <img src="../gallery/candy_cane_castle/2.jpg" onclick="move_slideshow('candy-cane-castle', direction=null, target=1)" class="image-sm wide">
+                    <img src="../gallery/candy_cane_castle/3.jpg" onclick="move_slideshow('candy-cane-castle', direction=null, target=2)" class="image-sm wide">
+                    <img src="../gallery/candy_cane_castle/4.jpg" onclick="move_slideshow('candy-cane-castle', direction=null, target=3)" class="image-sm wide">
+                </div>
+            </div>
+
+            <div class="card" id="swimming-pool">
+                <div class="card-title">
+                    <h1>Swimming Pool</h1>
+                    <!-- <img class="logo" src="../gallery/swimming_pool/logo.png" width="90px"> -->
+                </div>
+                <p class="card-text">placeholder text
+                </p>
+                <div class="image-slideshow">
+                    <button class="image-arrow" onclick="move_slideshow('swimming-pool', direction=-1)">&#10094;</button>
+                    <div class="main-image" data-index="0">
+                        <img src="../gallery/swimming_pool/1.jpg" class="image-lg shown">
+                        <img src="../gallery/swimming_pool/2.jpg" class="image-lg">
+                        <img src="../gallery/swimming_pool/3.jpg" class="image-lg">
+                        <img src="../gallery/swimming_pool/4.jpg" class="image-lg">
+                    </div>
+                    <button class="image-arrow" onclick="move_slideshow('swimming-pool', direction=+1)">&#10095;</button>
+                </div>
+                <div class="image-previews">
+                    <img src="../gallery/swimming_pool/1.jpg" onclick="move_slideshow('swimming-pool', direction=null, target=0)" class="image-sm wide selected-image" >
+                    <img src="../gallery/swimming_pool/2.jpg" onclick="move_slideshow('swimming-pool', direction=null, target=1)" class="image-sm wide">
+                    <img src="../gallery/swimming_pool/3.jpg" onclick="move_slideshow('swimming-pool', direction=null, target=2)" class="image-sm wide">
+                    <img src="../gallery/swimming_pool/4.jpg" onclick="move_slideshow('swimming-pool', direction=null, target=3)" class="image-sm wide">
+                </div>
+            </div>
+
+        </div>
+
+        <div id="footer">
+            <p>gingerbreadvote &copy; 2024  |  <a href="https://github.com/jebrit/gingerbreadvote" target="_blank">source</a> </p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            start_countdown("2025-12-16T05:00:00.000+00:00");
+            randomize_entries();
+        });
+    </script>
+
+</body>
+
+</html>
