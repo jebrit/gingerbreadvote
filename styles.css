@@ -214,8 +214,8 @@ a {
 
 #footer {
   margin-top: 50px;
-  text-align: right;
-  opacity: 70%;
+  text-align: center;
+  opacity: 0.75;
 }
 
 /* Animation and Countdown */
